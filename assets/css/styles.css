@@ -1,3 +1,9 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
 :root {
     --color-1: #f28076;
     --color-2: #ffb6af;
@@ -6,7 +12,13 @@
     --color-5: #4eb09b;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
+    font-size: 1.6rem;
+    font-family: Poppins, sans-serif;
     cursor: default;
 }
 
@@ -15,12 +27,12 @@ a {
     text-decoration: none;
 }
 
-/* slide */
+/* slide header */
 .carousel .header-slides {
     height: 300px;
 }
 
-/* Nav */
+/* Navigator */
 .navbar {
     margin-top: 10px;
     background: var(--color-5);
