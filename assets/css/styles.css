@@ -12,12 +12,7 @@
     --color-5: #4eb09b;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    font-size: 1.6rem;
     font-family: Poppins, sans-serif;
     cursor: default;
 }
@@ -81,6 +76,7 @@ a {
 .navbar-expand-lg .navbar-nav .dropdown-menu {
     border-radius: 0 0 16px 16px;
     top: 57px;
+    left: 0;
 }
 
 .dropdown-menu .dropdown-item {
@@ -95,19 +91,22 @@ a {
 .side-bar,
 .slide__bar {
     position: sticky;
-    top: 0;
+    top: 20px;
     z-index: 1;
     padding-top: 0px;
 }
 
 .side-bar .list-group .list-group-item {
     background-color: #4eb09b;
-    font-size: 1.3rem;
     font-weight: 600;
 }
 
 .side-bar .list-group .list-group-item:hover {
     background-color: var(--color-1);
+}
+
+.list-group__link {
+    display: block;
 }
 
 .side-bar .list-group .list-group-item:not(:nth-child(1)) {
@@ -119,15 +118,36 @@ a {
 }
 
 /* Card */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.card:hover {
+    border: none;
+}
+
+.shop__card + .shop__card {
+    margin-top: 20px;
+}
+
+.card-bg {
+    width: 100%;
+}
+
 .card__item {
     transition: 0.25s;
+    border-radius: 10px;
 }
 
 .card__item:hover {
+    border-width: 0;
+    box-shadow: 10px 10px 10px #ccc;
     transform: translateY(-10px);
 }
 
 .card__item .card {
+    margin-top: 20px;
     padding: 10px;
 }
 
@@ -142,11 +162,9 @@ a {
     transform: scale(1.1);
 }
 
-.card__group + .card__group {
-    margin-top: 20px;
-}
-
 .card__item .card__link {
+    display: inline-block;
+    height: 50px;
     color: var(--color-1);
 }
 
