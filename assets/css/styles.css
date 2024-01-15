@@ -131,8 +131,12 @@ a {
     margin-top: 20px;
 }
 
-.card-bg {
+.card__bg {
+    position: relative;
+    left: 12px;
     width: 100%;
+    padding: 3px;
+    border: 1px solid #ccc;
 }
 
 .card__item {
@@ -179,4 +183,51 @@ a {
 
 .card__item .card__btn:hover {
     opacity: 0.8;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner__heading,
+.banner__desc {
+    position: absolute;
+}
+
+.banner .banner__heading {
+    top: -20px;
+    left: 70px;
+}
+
+.banner__desc {
+    bottom: -40px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 120px;
+    background: var(--color-5);
+}
+
+.footer__logo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.footer__list {
+    margin-top: 50px;
+}
+
+.footer__item {
+    list-style: none;
+}
+
+.footer__link {
+    color: #fff;
+    transition: 0.25s;
+}
+
+.footer__link:hover {
+    color: #f28076;
 }
